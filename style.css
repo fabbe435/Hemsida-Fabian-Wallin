@@ -1,7 +1,6 @@
 #search-button {
   display: flexbox;
   position: static;
-  padding: 1%;
   border: 1px solid #ccc;
   padding-bottom: 10px;
 }
@@ -21,7 +20,11 @@ header {
   padding-left: 40%;
   padding-bottom: 1%;
   padding-top: 1%;
+  width: 60%;
   display: flex;
+  border-style:dashed;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 li {
@@ -35,8 +38,7 @@ h1{
 
 img{
   float: top;
-  width: fit-content;
+  width: 500px;
   height: 400px;
   object-fit: cover;
-  
 }
