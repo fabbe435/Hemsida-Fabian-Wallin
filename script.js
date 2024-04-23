@@ -2,6 +2,8 @@
 //variabler:
 const apiKey = '2xIvmDUVOpjG+4QgFWrHjg==7aIYVY0JpsxMQ8se';
 
+const muscle = 'biceps'
+
 //fetch:
 fetch(`https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`, {
   headers: {
