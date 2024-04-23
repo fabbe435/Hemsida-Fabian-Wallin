@@ -1,0 +1,54 @@
+#search-input {
+  display: flexbox;
+  position: static;
+  margin-left: 35%;
+  padding: 1%;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  font-size: 16px;
+}
+
+/* Stilmall för hover-effekt */
+#search-input:hover {
+  border-color: #1e1e24;
+}
+
+/* Stilmall för fokus-effekt */
+#search-input:focus {
+  border-color: #1e1e24;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#search-button {
+  display: flexbox;
+  position: static;
+  padding: 1%;
+  border: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+#search-button:hover {
+  border-color: #fb9f89;
+}
+
+/* Stilmall för fokus-effekt */
+#search-button:focus {
+  border-color: #1e1e24;
+  box-shadow: 0 0 5px #fb9f89;
+}
+
+header {
+  background-color: #c4af9a;
+  padding-left: 40%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  display: flex;
+}
+h2 {
+  margin-left: 10%;
+}
+
+li {
+  margin-left: -15%;
+  margin-top: 22px;
+}
