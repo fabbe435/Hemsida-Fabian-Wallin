@@ -13,7 +13,6 @@ body {
 }
 
 #search-button:hover {
-  border-color: #fb9f89;
 }
 
 /* Stilmall för fokus-effekt */
@@ -28,10 +27,25 @@ header {
   padding-left: 40%;
   padding-bottom: 1%;
   padding-top: 1%;
-  width: 60%;
+  width: 59%;
   display: flex;
+  position: fixed;
   border-style: double;
   border-radius: 10px;
+  margin-top: -19px;
+}
+
+.headerLink{
+  margin-top: 25px;
+}
+
+footer {
+  position: static;
+  text-align: center;
+  left: 0%;
+  bottom: 0%;
+  width: 100%;
+  background-color: red;
 }
 
 li {
@@ -43,11 +57,12 @@ h1 {
   margin-left: 1%;
 }
 
-img {
+.musclepics {
   float: top;
   width: 500px;
   height: 400px;
   object-fit: cover;
+  margin-top: 115px;
 }
 
 .result {
@@ -55,8 +70,10 @@ img {
   color: #eef4ed;
   padding-bottom: 5px;
   padding-left: 5px;
+  width: 40%;
+  display: flexbox;
 }
 
-#textField {
-  display: none;
+.instructionText{
+
 }

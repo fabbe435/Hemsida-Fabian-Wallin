@@ -26,18 +26,6 @@ fetch(`https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`, {
   }
 })
 
-function displayText(){
-  var text = document.getElementById("textField");
-  text.style.display = "block";
-  if (text.style.display ="block"){
-  }
-}
-
-function hideText(){
-  var text = document.getElementById("TextField");
-  text.style.display = "none";
-}
-
 function displayResults(exercises) {
   const resultsSection = document.getElementById('resultsSection');
   resultsSection.innerHTML = '';
@@ -56,8 +44,7 @@ function displayResults(exercises) {
     <p>Difficulty: ${exerciseDifficulty}</p>
     <p>Type of exercise: ${exerciseType}</p>
     <p>Equipment: ${exerciseEquipment}</p>
-    <button id="DisplayInstructions" onclick="displayText()">Show/Hide Instructions</button>
-    <div id="textField">Instructions: ${exerciseInstructions}</div>
+    <p class="instructionText">Instructions: ${exerciseInstructions}</p>
     `;
 
     resultsSection.appendChild(resultDiv);
