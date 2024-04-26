@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+body {
+  background-color: #8da9c4;
+  font-family: "Lora", serif;
+}
+
 #search-button {
   display: flexbox;
   position: static;
@@ -16,15 +23,15 @@
 }
 
 header {
-  background-color: #c4af9a;
+  background-color: #0b2545;
+  color: #eef4ed;
   padding-left: 40%;
   padding-bottom: 1%;
   padding-top: 1%;
   width: 60%;
   display: flex;
-  border-style:dashed;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-style: double;
+  border-radius: 10px;
 }
 
 li {
@@ -32,13 +39,24 @@ li {
   margin-top: 22px;
 }
 
-h1{
+h1 {
   margin-left: 1%;
 }
 
-img{
+img {
   float: top;
   width: 500px;
   height: 400px;
   object-fit: cover;
+}
+
+.result {
+  background-color: #134074;
+  color: #eef4ed;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+#textField {
+  display: none;
 }
