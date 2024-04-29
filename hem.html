@@ -6,46 +6,70 @@
     <title>Document</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="777.png" />
+    <link rel="icon" class="logo" type="image/x-icon" href="777.png" />
     <audio
       src="b378992f203f4ed994d90a84c2169c83.HD-1080p-2.5Mbps-27697379.mp4"
       autoplay
     ></audio>
-    <meta name="view-transition" content="same-origin">
+    <meta name="view-transition" content="same-origin" />
   </head>
   <body>
     <header>
-      <a href="hem.html" class="headerLink">hem</a>
-      <h2>TräningsKungen</h2>
-    </header>
-    <main>
+      <div class="logoContainer">
+        <img src="777.png" alt="logga" />
+        <h2>TräningsKungen</h2>
+      </div>
+
       <nav>
-        <button id="search-button">
-          <a href="biceps.html">
-            <img
-              class="musclepics"
-              src="Muscular-Bodybuilder-Doing-Biceps-Workout-With-A-Bicep-Curl.webp"
-              alt="biceps"
-            />
-          </a>
-          <h1>Biceps</h1>
-        </button>
-        <button id="search-button">
-          <a href="triceps.html"
-            ><img
-              class="musclepics"
-              src="depositphotos_63713239-stock-photo-bodybuilder-doing-exercise-for-triceps.jpg"
-              alt="triceps"
-          /></a>
-          <h1>Triceps</h1>
-        </button>
-        <button id="search-button">
-          <a href="chest.html"
-            ><img src="5-chest-supersets-wide.webp" alt="chest" class="musclepics"
-          /></a>
-          <h1>Chest</h1>
-        </button>
+        <ul>
+          <li>
+            <a href="hem.html" class="headerLink">hem</a>
+          </li>
+          <li>
+            <a href="hem.html" class="headerLink">Övningar</a>
+          </li>
+          <li>
+            <a href="https://youtu.be/PWWOLIjeJy8" class="headerLink"
+              >Youtube</a
+            >
+          </li>
+        </ul>
       </nav>
+    </header>
+
+    <main>
+      <section>
+        <nav class="musclelinks">
+          <button id="search-button">
+            <a href="biceps.html">
+              <img
+                class="musclepics"
+                src="Muscular-Bodybuilder-Doing-Biceps-Workout-With-A-Bicep-Curl.webp"
+                alt="biceps"
+              />
+            </a>
+            <h1>Biceps</h1>
+          </button>
+          <button id="search-button">
+            <a href="triceps.html"
+              ><img
+                class="musclepics"
+                src="depositphotos_63713239-stock-photo-bodybuilder-doing-exercise-for-triceps.jpg"
+                alt="triceps"
+            /></a>
+            <h1>Triceps</h1>
+          </button>
+          <button id="search-button">
+            <a href="chest.html"
+              ><img
+                src="5-chest-supersets-wide.webp"
+                alt="chest"
+                class="musclepics"
+            /></a>
+            <h1>Chest</h1>
+          </button>
+        </nav>
+      </section>
       <div id="search-results"></div>
     </main>
     <footer>
