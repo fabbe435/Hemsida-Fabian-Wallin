@@ -1,7 +1,6 @@
-
 //variabler:
 const apiKey = '2xIvmDUVOpjG+4QgFWrHjg==7aIYVY0JpsxMQ8se';
-const muscle = 'triceps'
+const muscle = 'triceps';
 
 //fetch:
 fetch(`https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`, {
@@ -19,13 +18,12 @@ fetch(`https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`, {
   console.log(data);
   if (data){
     const exercises = data;
-    displayResults(exercises)
+    displayResults(exercises);
   }
   else{
     console.error('Request failed:', error);
   }
-})
-
+});
 
 function displayResults(exercises) {
   const resultsSection = document.getElementById('resultsSection');
@@ -34,7 +32,7 @@ function displayResults(exercises) {
   exercises.forEach(exercise => {
     const exerciseName = exercise.name || 'Namn saknas';
     const exerciseType = exercise.type || 'Namn saknas';
-    const exerciseDescription = exercise.instructions || 'Ingen beskrivning tillagd';
+    const exerciseInstructions = exercise.instructions || 'Ingen beskrivning tillagd';
     const exerciseEquipment = exercise.equipment || 'Ingen information given';
     const exerciseDifficulty = exercise.difficulty || 'Ingen information given';
 
@@ -42,12 +40,27 @@ function displayResults(exercises) {
     resultDiv.classList.add('result');
     resultDiv.innerHTML = `
     <h3>${exerciseName}</h3>
-    <p>Type of exercise: ${exerciseType}</p>
-    <p>Description: ${exerciseDescription}</p>
-    <p>Equipment: ${exerciseEquipment}</p>
     <p>Difficulty: ${exerciseDifficulty}</p>
+    <p>Type of exercise: ${exerciseType}</p>
+    <p>Equipment: ${exerciseEquipment}</p>
+    <nav>
+      <p class="hover" id="hover-${exerciseName}">Hover for Instructions</p>
+      <p class="instructions" id="instructions-${exerciseName}" style="display: none;">${exerciseInstructions}</p>
+    </nav>
     `;
 
     resultsSection.appendChild(resultDiv);
-  })
+
+    
+    const hoverParagraph = document.getElementById(`hover-${exerciseName}`);
+    const instructionsParagraph = document.getElementById(`instructions-${exerciseName}`);
+
+    hoverParagraph.addEventListener('mouseover', function() {
+      instructionsParagraph.style.display = 'block';
+    });
+
+    hoverParagraph.addEventListener('mouseout', function() {
+      instructionsParagraph.style.display = 'none';
+    });
+  });
 }

@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+body {
+  background-color: #5c5552;
+  font-family: "Lora", serif;
+}
+
+#search-button {
+  display: flex; /* Byt "flexbox" till "flex" */
+  position: static;
+  border: 1px solid #ccc;
+  padding-bottom: 10px;
+  width: 33%;
+  height: 33%;
+  transition: transform 0.5s ease;
+}
+
+#search-button:hover {
+  transform: scale(1.2);
+}
+
+/* Stilmall för fokus-effekt */
+#search-button:focus {
+  border-color: #1e1e24;
+  box-shadow: 0 0 5px #fb9f89;
+}
+
+li {
+  list-style-type: none;
+  color: #523249;
+}
+
+.logo {
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* Change as needed */
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer img {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.logoContainer h2 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+nav ul li {
+  margin-right: 20px; /* Adjust spacing between links as needed */
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+.headerLink {
+  text-decoration: none;
+  color: #523249; /* Link color */
+}
+
+@media (max-width: 768px) {
+  .logoContainer {
+    margin: 0 auto; /* Center the logo */
+  }
+}
+
+footer {
+  position: static;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #433633;
+}
+
+h2 {
+  text-align: center;
+}
+
+h1 {
+  margin-left: 1%;
+}
+
+.musclepics {
+  float: top;
+  width: 100%;
+  height: 30%;
+  object-fit: cover;
+  margin-top: 15px;
+  border-radius: 50px;
+}
+
+.musclelinks {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.result {
+  background-color: #dbebc0;
+  color: #523249;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  width: 70%;
+  margin-left: 15%;
+  display: flex; /* Byt "flexbox" till "flex" */
+  flex-direction: column; /* Lägg till flex-direction för att visa .instructions under .hover */
+  text-align: center;
+  margin-top: 1%;
+}
+
+.instructions {
+  opacity: 0;
+  height: 0; /* Ändra höjden till 0 */
+  overflow: hidden; /* Dölj överskottsinformation */
+  transition: opacity 0.5s ease, height 0.5s ease; /* Lägg till övergång för smidig effekt */
+}
+
+.result:hover .instructions {
+  /* Ändra .hover:hover till .result:hover */
+  opacity: 1;
+  height: auto; /* Återställ höjden till auto när visas */
+}
+
+.hover {
+  opacity: 1; /* Ändra 100% till 1 */
+}
+
+.hover:hover {
+  opacity: 0; /* Ändra 100% till 0 */
+}
