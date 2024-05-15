@@ -3,26 +3,43 @@
 body {
   background-color: #5c5552;
   font-family: "Lora", serif;
+  background-image: url("/images/Gym-structure-1080x675.png");
+  background-size: cover;
+  background-position: center;
 }
 
-#search-button {
-  display: flex; /* Byt "flexbox" till "flex" */
+#muscleBox {
+  display: flex;
   position: static;
   border: 1px solid #ccc;
   padding-bottom: 10px;
-  width: 33%;
-  height: 33%;
+  width: 30%;
+  height: fit-content;
   transition: transform 0.5s ease;
 }
 
-#search-button:hover {
+#muscleBox:hover {
   transform: scale(1.2);
 }
 
 /* Stilmall för fokus-effekt */
-#search-button:focus {
+#muscleBox:focus {
   border-color: #1e1e24;
   box-shadow: 0 0 5px #fb9f89;
+}
+
+.musclepics {
+  float: top;
+  width: 100%;
+  height: 30%;
+  object-fit: cover;
+  margin-top: 15px;
+  border-radius: 50px;
+}
+
+.musclelinks {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 li {
@@ -39,6 +56,7 @@ header {
   align-items: center;
   padding: 20px;
   background-color: #f0f0f0; /* Change as needed */
+  opacity: 75%;
 }
 
 .logoContainer {
@@ -50,6 +68,7 @@ header {
   width: 50px; /* Adjust size as needed */
   height: auto;
   margin-right: 10px; /* Adjust spacing as needed */
+  border-radius: 30%;
 }
 
 .logoContainer h2 {
@@ -99,20 +118,6 @@ h2 {
 
 h1 {
   margin-left: 1%;
-}
-
-.musclepics {
-  float: top;
-  width: 100%;
-  height: 30%;
-  object-fit: cover;
-  margin-top: 15px;
-  border-radius: 50px;
-}
-
-.musclelinks {
-  margin-left: 100px;
-  margin-right: 100px;
 }
 
 .result {
