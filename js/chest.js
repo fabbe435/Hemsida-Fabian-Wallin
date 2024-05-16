@@ -44,7 +44,7 @@ function displayResults(exercises) {
     <p>Type of exercise: ${exerciseType}</p>
     <p>Equipment: ${exerciseEquipment}</p>
     <nav>
-      <p class="hover" id="hover-${exerciseName}">Hover for Instructions</p>
+      <p class="hover" id="hover-${exerciseName}">Click for Instructions</p>
       <p class="instructions" id="instructions-${exerciseName}" style="display: none;">${exerciseInstructions}</p>
     </nav>
     `;
@@ -55,12 +55,12 @@ function displayResults(exercises) {
     const hoverParagraph = document.getElementById(`hover-${exerciseName}`);
     const instructionsParagraph = document.getElementById(`instructions-${exerciseName}`);
 
-    hoverParagraph.addEventListener('mouseover', function() {
-      instructionsParagraph.style.display = 'block';
-    });
-
-    hoverParagraph.addEventListener('mouseout', function() {
-      instructionsParagraph.style.display = 'none';
+    hoverParagraph.addEventListener('click', function() {
+      if (instructionsParagraph.style.display === 'none' || instructionsParagraph.style.display === '') {
+        instructionsParagraph.style.display = 'block';
+      } else {
+        instructionsParagraph.style.display = 'none';
+      }
     });
   });
 }
